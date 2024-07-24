@@ -22,7 +22,13 @@ jobs:
         node-version: '18' # Usar Node.js 18
 
     - name: Install dependencies
-      run: CYPRESS_INSTALL_BINARY=0 yarn install --frozen-lockfile --network-timeout 1000000
+      run: yarn install --frozen-lockfile --network-timeout 1000000
+
+    - name: Install Wrangler
+      run: yarn add --dev wrangler
 
     - name: Build the project
       run: yarn build
+
+    - name: Deploy to Cloudflare Workers
+      run: yarn wrangler deploy
