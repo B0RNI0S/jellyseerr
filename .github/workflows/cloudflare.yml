@@ -31,9 +31,6 @@ jobs:
     - name: Build the project
       run: yarn build
 
-    - name: Print environment variables
-      run: printenv
-
     - name: Deploy to Cloudflare Workers
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
