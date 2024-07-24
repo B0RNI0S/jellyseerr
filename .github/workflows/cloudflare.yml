@@ -11,6 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Produccion
 
     steps:
     - name: Checkout repository
@@ -29,6 +30,9 @@ jobs:
 
     - name: Build the project
       run: yarn build
+
+    - name: Print environment variables
+      run: printenv
 
     - name: Deploy to Cloudflare Workers
       env:
