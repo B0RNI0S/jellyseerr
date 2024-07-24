@@ -1,4 +1,4 @@
 name = "jellyseerr"
-type = "webpack"  # Cambia a "webpack" si usas un bundler como Webpack para TypeScript
+main = "./src/index.ts" # init w/ TypeScript
 compatibility_date = "2024-07-24"
 account_id = "95aa1d8956118792d4266a2ede510cd8"
